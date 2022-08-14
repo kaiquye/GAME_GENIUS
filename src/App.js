@@ -40,25 +40,37 @@ function App() {
     async function execute(color) {
         switch(color){
             case 'RED':
+                await setTime(RED, 'white',2000)
+                await setTime(RED, 'red',200)
+                break
+            case 'GREEN':
                 await setTime(GREEN, 'white',2000)
                 await setTime(GREEN, 'green',200)
+                break
+            case 'BLUE':
+                await setTime(BLUE, 'white',2000)
+                await setTime(BLUE, 'blue',200)
+                break
+            case 'YELLOW':
+                await setTime(YELLOW, 'white',2000)
+                await setTime(YELLOW, 'yellow',200)
+                break
         }
     }
 
-    async function STARTGAME(){
+    async function StartGame(){
       let order = []
       let green = 0;
       let runtime = genereteTime(10);
-        setLightGREEN(true)
+
       while (runtime >= 0){
           console.log('iniciou')
           const randomNumber = Math.floor(Math.random() * COLOR.length);
-            const currentColor = COLOR[randomNumber];
-            order.push(currentColor);
-            runtime -= 1;
-           await execute(currentColor)
-          //   await setTime(div_green, 'green',2000)
-          // await setTime(div_green, 'white',2000)
+          const currentColor = COLOR[randomNumber];
+          order.push(currentColor);
+          runtime -= 1;
+
+          await execute(currentColor)
       }
        setCurrentOrder(order)
        console.log(order)
@@ -66,20 +78,20 @@ function App() {
 
   return (
     <div className="App">
-        <main style={lightGREEN === true ? lightOn('green') : lightOf('')} >
+        <main >
             <div ref={GREEN}  className={style.GREEN_DEFAULT}>
                 GREEN
             </div>
-            <div style={lightRED === true ? lightOn('red') : lightOf('')} className={style.RED_DEFAULT}>
+            <div  ref={RED} style={lightRED === true ? lightOn('red') : lightOf('')} className={style.RED_DEFAULT}>
                 RED
             </div>
-            <div className={style.BLUE_DEFAULT}>
+            <div  ref={BLUE} className={style.BLUE_DEFAULT}>
                 BLUE
             </div>
-            <div className={style.YELLOW_DEFAULT}>
+            <div   ref={YELLOW} className={style.YELLOW_DEFAULT}>
                 YELLOW
             </div>
-            <button onClick={async()=> await STARTGAME()}>
+            <button onClick={async()=> await StartGame()}>
                 LIGAR
             </button>
         </main>
