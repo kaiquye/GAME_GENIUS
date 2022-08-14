@@ -1,0 +1,17 @@
+main{
+  display: grid;
+  grid-template-columns: 200px  200px;
+  grid-template-rows: 200px 200px;
+}
+.YELLOW_DEFAULT{
+  background-color: yellow;
+}
+.BLUE_DEFAULT{
+  background-color: blue;
+}
+.RED_DEFAULT{
+  background-color: red;
+}
+.GREEN_DEFAULT{
+  background-color: green;
+}
