@@ -1,4 +1,9 @@
+*{
+  margin: 0;
+}
 main{
+  height: 100vh;
+  background-color: #222;
   display: grid;
   grid-template-columns: 200px  200px;
   grid-template-rows: 200px 200px;
