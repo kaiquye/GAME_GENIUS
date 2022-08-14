@@ -32,7 +32,25 @@ function App() {
           const currentColor = COLOR[randomNumber]
           switch (currentColor) {
               case "RED" :
-                  setLightRED(true)
+                  setLightRED(true);
+                  setTimeout(()=>{
+                      setLightRED(false)
+                  }, [55])
+              case "BLUE" :
+                  setLightBLUE(true);
+                  setTimeout(()=>{
+                      setLightBLUE(false)
+                  }, [55])
+              case "GREEN" :
+                  setLightGREE(true);
+                  setTimeout(()=>{
+                      setLightGREE(false)
+                  }, [55])
+              case "YELLOW" :
+                  setLightYELLOW(true);
+                  setTimeout(()=>{
+                      setLightYELLOW(false)
+                  }, [55])
           }
           order.push(currentColor)
           runtime -= 1
@@ -45,7 +63,7 @@ function App() {
 
   return (
     <div className="App">
-        <main style={light === true ? lightOn : lightOf}>
+        <main style={lightRED === true ? lightOn : lightOf}>
             <div className={style.GREEN_DEFAULT}>
                 GREEN
             </div>
