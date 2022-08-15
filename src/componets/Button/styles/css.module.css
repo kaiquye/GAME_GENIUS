@@ -1,0 +1,28 @@
+.Button_LEFT{
+    width: 240px;
+    height: 240px;
+
+    border-top-left-radius: 400px;
+    background-color: red;
+}
+.Button_RIGHT{
+    width: 240px;
+    height: 240px;
+
+    border-top-right-radius: 400px;
+    background-color: red;
+}
+.Button_LEFT_TOP{
+    width: 240px;
+    height: 240px;
+
+    border-top-left-radius: 400px;
+    background-color: red;
+}
+.Button_LEFT_BUTTOM{
+    width: 240px;
+    height: 240px;
+
+    border-top-left-radius: 400px;
+    background-color: red;
+}
