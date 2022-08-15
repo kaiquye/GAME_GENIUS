@@ -14,15 +14,7 @@ function App() {
     const COLOR = ['RED', 'BLUE', 'GREEN', 'YELLOW']
 
     const [currentOrder, setCurrentOrder] = useState([])
-    const [userOrder, setUserOrder] = useState([])
-
-    const lightOf = (color) => {
-        return { 'background-color': color}
-    }
-
-    const lightOn = (color) =>{
-       return {'background-color': color}
-    }
+    const [userOrder, setUserOrder] = useState([''])
 
     function genereteTime (limit) {
         return (Math.floor(Math.random() * limit));
@@ -55,6 +47,7 @@ function App() {
                 await setTime(YELLOW, 'white',2000)
                 await setTime(YELLOW, 'yellow',200)
                 break
+            default:
         }
     }
 
@@ -69,31 +62,42 @@ function App() {
           const currentColor = COLOR[randomNumber];
           order.push(currentColor);
           runtime -= 1;
-
           await execute(currentColor)
       }
        setCurrentOrder(order)
        console.log(order)
     }
 
+    function verificarResultado(){
+        const keys = Object.values(currentOrder);
+        const keysByUser = Object.values(userOrder).filter(value => value !== '');
+        const result = keys.filter((color, index) => color === keysByUser[index] )
+        const tamanhoOriginal = keys.length;
+        const totalDeAcertos = result.length;
+        console.log(tamanhoOriginal)
+        console.log(totalDeAcertos)
+        console.log(result)
+    }
+
   return (
     <div className="App">
         <main >
-            <div ref={GREEN}  className={style.GREEN_DEFAULT}>
+            <div ref={GREEN} onClick={()=>setUserOrder([...userOrder, 'GREEN'])} className={style.GREEN_DEFAULT}>
                 GREEN
             </div>
-            <div  ref={RED} style={lightRED === true ? lightOn('red') : lightOf('')} className={style.RED_DEFAULT}>
+            <div  ref={RED}  onClick={()=>setUserOrder([...userOrder, 'RED'])}   className={style.RED_DEFAULT}>
                 RED
             </div>
-            <div  ref={BLUE} className={style.BLUE_DEFAULT}>
+            <div  ref={BLUE} onClick={()=>setUserOrder([...userOrder, 'BLUE'])}  className={style.BLUE_DEFAULT}>
                 BLUE
             </div>
-            <div   ref={YELLOW} className={style.YELLOW_DEFAULT}>
+            <div ref={YELLOW} onClick={()=>setUserOrder([...userOrder, 'YELLOW'])}  className={style.YELLOW_DEFAULT}>
                 YELLOW
             </div>
             <button onClick={async()=> await StartGame()}>
                 LIGAR
             </button>
+            <button onClick={()=>verificarResultado()}>teste</button>
         </main>
     </div>
   );
