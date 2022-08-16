@@ -1,7 +1,7 @@
 import css from '../Button/styles/css.module.css';
 import { useEffect, useState } from 'react';
 
-export function Select({ ref_, click, style, children, position }) {
+export function Select({ ref_, click, style, children, position, color }) {
   const [positionBtn, setPosition] = useState();
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export function Select({ ref_, click, style, children, position }) {
   return (
     <section>
       {positionBtn && (
-        <div ref={ref_} onClick={() => click()} className={positionBtn}>
+        <div ref={ref_} onClick={() => click(color)} className={positionBtn}>
           {children}
         </div>
       )}

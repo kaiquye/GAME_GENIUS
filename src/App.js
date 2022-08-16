@@ -55,31 +55,37 @@ function App() {
     let green = 0;
     let runtime = genereteTime(7);
 
-    while (runtime >= 0) {
-      console.log('iniciou');
-      const randomNumber = Math.floor(Math.random() * COLOR.length);
-      const currentColor = COLOR[randomNumber];
-      order.push(currentColor);
-      runtime -= 1;
-      await execute(currentColor);
+    order.push(...currentOrder);
+    const randomNumber = Math.floor(Math.random() * COLOR.length);
+    const currentColor = COLOR[randomNumber];
+    order.push(currentColor);
+
+    for (let i = 0; order.length > i; i++) {
+      await execute(order[i]);
     }
+
     setCurrentOrder(order);
-    setTimeout(() => {
-      checkResult();
-      setPlaying(false);
-    }, [1000]);
+    setPlaying(false);
     console.log(order);
   }
 
   function checkResult() {
+    console.log(userOrder);
     const keys = Object.values(currentOrder);
     const keysByUser = Object.values(userOrder).filter(value => value !== '');
     const result = keys.filter((color, index) => color === keysByUser[index]);
     const tamanhoOriginal = keys.length;
     const totalDeAcertos = result.length;
+
+    if (tamanhoOriginal !== totalDeAcertos) {
+      alert('errou');
+      setCurrentOrder([]);
+      setUserOrder([]);
+    }
+
+    StartGame();
     console.log(tamanhoOriginal);
     console.log(totalDeAcertos);
-    console.log(result);
   }
 
   function selectColor(color) {
@@ -90,34 +96,6 @@ function App() {
     <div className={css.app}>
       <section className={css.bodyGame}>
         <main className={css.game}>
-          {/*<div*/}
-          {/*  ref={GREEN}*/}
-          {/*  onClick={() => setUserOrder([...userOrder, 'GREEN'])}*/}
-          {/*  className={style.GREEN_DEFAULT}*/}
-          {/*>*/}
-          {/*  GREEN*/}
-          {/*</div>*/}
-          {/*<div*/}
-          {/*  ref={RED}*/}
-          {/*  onClick={() => setUserOrder([...userOrder, 'RED'])}*/}
-          {/*  className={style.RED_DEFAULT}*/}
-          {/*>*/}
-          {/*  RED*/}
-          {/*</div>*/}
-          {/*<div*/}
-          {/*  ref={BLUE}*/}
-          {/*  onClick={() => setUserOrder([...userOrder, 'BLUE'])}*/}
-          {/*  className={style.BLUE_DEFAULT}*/}
-          {/*>*/}
-          {/*  BLUE*/}
-          {/*</div>*/}
-          {/*<div*/}
-          {/*  ref={YELLOW}*/}
-          {/*  onClick={() => setUserOrder([...userOrder, 'YELLOW'])}*/}
-          {/*  className={style.YELLOW_DEFAULT}*/}
-          {/*>*/}
-          {/*  YELLOW*/}
-          {/*</div>*/}
           <div className={css.menuGame}>
             <div>
               {playing === false ? (
@@ -125,24 +103,36 @@ function App() {
               ) : (
                 <button>running</button>
               )}
-              {/*<button*/}
-              {/*  style={{ backgroundColor: 'red' }}*/}
-              {/*  onClick={() => checkResult()}*/}
-              {/*>*/}
-              {/*  VERIFICAR*/}
-              {/*</button>*/}
+              <button
+                style={{ backgroundColor: 'red' }}
+                onClick={() => checkResult()}
+              >
+                VERIFICAR
+              </button>
             </div>
           </div>
           <div className={css.displayGame}>
-            <Select ref_={GREEN} click={selectColor} position={'LEFT'}></Select>
-            <Select ref_={RED} click={selectColor} position={'RIGHT'}></Select>
+            <Select
+              ref_={GREEN}
+              click={selectColor}
+              color={'GREEN'}
+              position={'LEFT'}
+            ></Select>
+            <Select
+              ref_={RED}
+              click={selectColor}
+              color={'RED'}
+              position={'RIGHT'}
+            ></Select>
             <Select
               ref_={BLUE}
+              color={'BLUE'}
               click={selectColor}
               position={'LEFT_BOTTON'}
             ></Select>
             <Select
               ref_={YELLOW}
+              color={'YELLOW'}
               click={selectColor}
               position={'RIGHT_BOTTON'}
             ></Select>
