@@ -53,7 +53,6 @@ function App() {
     setPlaying(true);
     let order = [];
     let green = 0;
-    let runtime = genereteTime(7);
 
     order.push(...currentOrder);
     const randomNumber = Math.floor(Math.random() * COLOR.length);
@@ -66,7 +65,6 @@ function App() {
 
     setCurrentOrder(order);
     setPlaying(false);
-    console.log(order);
   }
 
   function checkResult() {
@@ -99,16 +97,24 @@ function App() {
           <div className={css.menuGame}>
             <div>
               {playing === false ? (
-                <button onClick={async () => await StartGame()}>INICIAR</button>
+                <>
+                  <button
+                    className={css.startBtn}
+                    onClick={async () => await StartGame()}
+                  >
+                    INICIAR
+                  </button>
+                  <button
+                    className={css.startBtn}
+                    style={{ backgroundColor: 'red' }}
+                    onClick={() => checkResult()}
+                  >
+                    VERIFICAR
+                  </button>
+                </>
               ) : (
-                <button>running</button>
+                <button className={css.running}>running</button>
               )}
-              <button
-                style={{ backgroundColor: 'red' }}
-                onClick={() => checkResult()}
-              >
-                VERIFICAR
-              </button>
             </div>
           </div>
           <div className={css.displayGame}>
