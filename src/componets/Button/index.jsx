@@ -1,11 +1,10 @@
 import css from '../Button/styles/css.module.css';
 import { useEffect, useState } from 'react';
 
-export function Button({ ref, click, style, children, position }) {
+export function Select({ ref_, click, style, children, position }) {
   const [positionBtn, setPosition] = useState();
 
   useEffect(() => {
-    setPosition(css.Button_LEFT);
     switch (position) {
       case 'LEFT':
         setPosition(css.Button_LEFT);
@@ -13,18 +12,22 @@ export function Button({ ref, click, style, children, position }) {
       case 'RIGHT':
         setPosition(css.Button_RIGHT);
         break;
+      case 'LEFT_BOTTON':
+        setPosition(css.Button_LEFT_BOTTON);
+        break;
+      case 'RIGHT_BOTTON':
+        setPosition(css.Button_LEFT_BOTTOM);
+        break;
     }
   }, []);
 
   return (
     <section>
-      {positionBtn &&
-        ((<>{console.log(positionBtn)}</>),
-        (
-          <div ref={ref} onClick={() => click} className={positionBtn}>
-            {children}
-          </div>
-        ))}
+      {positionBtn && (
+        <div ref={ref_} onClick={() => click()} className={positionBtn}>
+          {children}
+        </div>
+      )}
     </section>
   );
 }

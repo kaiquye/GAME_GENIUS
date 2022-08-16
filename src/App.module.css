@@ -1,22 +1,95 @@
 *{
   margin: 0;
+  height: 100%;
 }
-main{
-  height: 100vh;
-  background-color: #222;
-  display: grid;
-  grid-template-columns: 200px  200px;
-  grid-template-rows: 200px 200px;
-}
-.YELLOW_DEFAULT{
-  background-color: yellow;
-}
-.BLUE_DEFAULT{
-  background-color: blue;
-}
-.RED_DEFAULT{
+.app{
+  width: 100%;
+  height: 130vh;
+
+  display: flex;
+
   background-color: red;
+  box-shadow: inset #1e1e1e 0px 0px 540px 10px;
 }
-.GREEN_DEFAULT{
-  background-color: green;
+.bodyGame{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.game{
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+.displayGame{
+  width: 700px;
+  border-radius: 500px;
+  padding: 30px;
+
+  box-shadow: inset #000000 0px 0px 44px 10px;
+  box-shadow: rgba(0, 0, 0, 0.89) 10px 10px 15px 11px;
+  background-color: rgba(30, 30, 30, 0.92);
+
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0px;
+}
+.menuGame{
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+}
+.menuGame div {
+  width: 250px;
+  height: 250px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border: solid black 30px;
+  background-color: rgb(117, 117, 117);
+  box-shadow: inset #000000 0px 0px 50px 25px;
+  border-radius: 500px;
+}
+.menuGame div button {
+  padding: 10px;
+
+  width: 150px;
+
+  background-color: black;
+  color: white;
+
+  font-weight: bold;
+  font-size: 20px;
+
+  height: 50px;
+
+  cursor: pointer;
+
+  border-radius: 13232px;
+  margin-top: 10px;
+}
+.menuGame div button:hover{
+  background-color: orange;
 }

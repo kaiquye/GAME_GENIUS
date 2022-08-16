@@ -1,28 +1,68 @@
+
+
 .Button_LEFT{
-    width: 240px;
-    height: 240px;
+    width: 300px;
+    height: 300px;
 
+    border: solid black 20px;
     border-top-left-radius: 400px;
+    background-color: #43d243;
+    cursor: pointer;
+
+    box-shadow: inset #287717 10px 10px 20px 10px;
+}
+
+.Button_LEFT:hover{
+    background-color: #107010;
+}
+
+.Button_RIGHT:hover{
     background-color: red;
 }
+
 .Button_RIGHT{
-    width: 240px;
-    height: 240px;
-
+    width: 300px;
+    height: 300px;
+    border: solid black 20px;
     border-top-right-radius: 400px;
-    background-color: red;
-}
-.Button_LEFT_TOP{
-    width: 240px;
-    height: 240px;
+    background-color: #f87c7c;
 
-    border-top-left-radius: 400px;
-    background-color: red;
-}
-.Button_LEFT_BUTTOM{
-    width: 240px;
-    height: 240px;
+    cursor: pointer;
 
-    border-top-left-radius: 400px;
-    background-color: red;
+    box-shadow: inset #c21919 -10px 10px 20px 10px;
+}
+
+
+.Button_LEFT_BOTTON:hover{
+    background-color: blue;
+}
+
+.Button_LEFT_BOTTON{
+    width: 300px;
+    height: 300px;
+
+    border: solid black 20px;
+    border-bottom-left-radius: 400px;
+    background-color: #4949e8;
+
+    cursor: pointer;
+
+    box-shadow: inset #0a3396 10px -10px 20px 10px;
+}
+
+.Button_LEFT_BOTTOM:hover{
+    background-color: yellow;
+}
+
+.Button_LEFT_BOTTOM{
+    width: 300px;
+    height: 300px;
+
+    border: solid black 20px;
+    border-bottom-right-radius: 400px;
+    background-color: #c0c067;
+
+    cursor: pointer;
+
+    box-shadow: inset #cbcb0a -3px 5px 20px 10px;
 }
