@@ -31,4 +31,3 @@ export function Select({ ref_, click, style, children, position, color }) {
     </section>
   );
 }
-// setUserOrder([...userOrder, 'YELLOW'])
