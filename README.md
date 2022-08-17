@@ -22,7 +22,6 @@ em React.JS, sem o auxilio de videos ou tutoriais da internet
   npm start
 ``` 
 
-
 <h1>Linkedin</h1>
 <img height="150" src="https://media-exp1.licdn.com/dms/image/C4D03AQFmuFjKym5Lvg/profile-displayphoto-shrink_200_200/0/1639689567823?e=1666224000&v=beta&t=FWihO2UdNGudNL2SypCMGxD3856wbUVutiFv-Q4OguY"/> 
 
