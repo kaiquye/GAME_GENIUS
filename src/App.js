@@ -107,7 +107,7 @@ function App() {
                                 await StartGame();
                               }}
                           >
-                            INICIAR
+                            START
                           </button>
                       }
                     </div>
