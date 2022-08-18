@@ -1,3 +1,4 @@
+
 <h1 align="center"> Genius </h1>
 
 <p align="center">
@@ -9,8 +10,8 @@
 This game was developed to practice my knowledge
 in React.JS, without the help of videos or internet tutorials
 
-Este jogo foi desenvolvido para praticar meus conhecimentos 
-em React.JS, sem o auxilio de videos ou tutoriais da internet
+###
+[Gravação de tela de 17-08-2022 18:58:29.webm](https://user-images.githubusercontent.com/69175890/185251308-80de6644-dbcd-487c-b4cd-8827363806fc.webm)
 
 <h1>Start</h1>
 
@@ -22,8 +23,7 @@ em React.JS, sem o auxilio de videos ou tutoriais da internet
   npm start
 ``` 
 
-
 <h1>Linkedin</h1>
-<img height="150" src="https://media-exp1.licdn.com/dms/image/C4D03AQFmuFjKym5Lvg/profile-displayphoto-shrink_200_200/0/1639689567823?e=1666224000&v=beta&t=FWihO2UdNGudNL2SypCMGxD3856wbUVutiFv-Q4OguY"/> 
+<img height="90" src="https://media-exp1.licdn.com/dms/image/C4D03AQFmuFjKym5Lvg/profile-displayphoto-shrink_200_200/0/1639689567823?e=1666224000&v=beta&t=FWihO2UdNGudNL2SypCMGxD3856wbUVutiFv-Q4OguY"/> 
 
 https://www.linkedin.com/in/kaique-mendes-9b61381a5/
