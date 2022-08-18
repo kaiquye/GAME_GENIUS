@@ -23,6 +23,6 @@ in React.JS, without the help of videos or internet tutorials
 ``` 
 
 <h1>Linkedin</h1>
-<img height="110" src="https://media-exp1.licdn.com/dms/image/C4D03AQFmuFjKym5Lvg/profile-displayphoto-shrink_200_200/0/1639689567823?e=1666224000&v=beta&t=FWihO2UdNGudNL2SypCMGxD3856wbUVutiFv-Q4OguY"/> 
+<img height="9=80" src="https://media-exp1.licdn.com/dms/image/C4D03AQFmuFjKym5Lvg/profile-displayphoto-shrink_200_200/0/1639689567823?e=1666224000&v=beta&t=FWihO2UdNGudNL2SypCMGxD3856wbUVutiFv-Q4OguY"/> 
 
 https://www.linkedin.com/in/kaique-mendes-9b61381a5/
