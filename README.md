@@ -10,6 +10,7 @@
 This game was developed to practice my knowledge
 in React.JS, without the help of videos or internet tutorials
 
+###
 [Gravação de tela de 17-08-2022 18:58:29.webm](https://user-images.githubusercontent.com/69175890/185251308-80de6644-dbcd-487c-b4cd-8827363806fc.webm)
 
 <h1>Start</h1>
