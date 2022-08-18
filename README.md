@@ -1,4 +1,3 @@
-4
 <h1 align="center"> Genius </h1>
 
 
@@ -12,14 +11,16 @@
 This game was developed to practice my knowledge
 in React.JS, without the help of videos or internet tutorials
 
+* Link heroku
+    * https://gamegeniuss.herokuapp.com/
+    
 ###
 <p align="center">
     <img height="400" src="https://user-images.githubusercontent.com/69175890/185414099-614b7626-54c0-4eab-aeb4-1391b8d0f50b.png">
 </p>
 <h1>Start</h1>
 
-* Link heroku
-    * https://gamegeniuss.herokuapp.com/
+
 
 ```
   installing dependencies
