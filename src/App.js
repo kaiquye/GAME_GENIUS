@@ -3,12 +3,15 @@ import { useState, useRef, useEffect } from 'react';
 import { Select } from './componets/Button';
 import LightBuild from "./services/lightBulb";
 import checkResult from "./services/checkResult";
-import music from './seeds/Baby Shark  Remix funk.mp3'
+import music from './seeds/Xuxa - Soco Bate (Popai Funk Remix).mp3'
 import risadaFail from './seeds/Errou - Faustao Falando.mp3'
 function App() {
 
+
   const [start, setStart] = useState(true)
   const [playing, setPlaying] = useState(false);
+  const musicBaby = new Audio(music)
+  const erro = new Audio(risadaFail)
   const [index, setIndex] = useState(0)
 
   const [gameOver, setGameOver] = useState(false);
@@ -32,7 +35,9 @@ function App() {
   const check = checkResult({StartGame, current_CPU_Order, current_USER_Order})
 
   function fail(){
-    new Audio(risadaFail).play()
+    musicBaby.pause()
+    musicBaby.volume = 0.0;
+    erro.play()
     setGameOver(true)
   }
 
@@ -96,6 +101,8 @@ function App() {
                           <button
                               className={css.startBtn}
                               onClick={async () => {
+                                musicBaby.play()
+                                musicBaby.volume = 0.1;
                                 setStart(false)
                                 await StartGame();
                               }}

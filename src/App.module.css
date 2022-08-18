@@ -18,14 +18,14 @@
   font-size: 40px;
 }
 .level {
-  font-size: 100px;
+  font-size: 35px;
   font-family: Ubuntu;
   color: yellow;
 }
 
 .imageFunny{
-  width: 500px;
-  height: 500px;
+  width: 200px;
+  height: 200px;
   background-image: url("seeds/bob-esponja-dançando.gif");
   background-size: 100%;
 }
