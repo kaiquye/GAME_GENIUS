@@ -1,5 +1,7 @@
-
+4
 <h1 align="center"> Genius </h1>
+
+
 
 <p align="center">
     <IMG height="200" src="https://macmagazine.com.br/wp-content/uploads/2010/09/24-genius_icon.png">
@@ -11,9 +13,13 @@ This game was developed to practice my knowledge
 in React.JS, without the help of videos or internet tutorials
 
 ###
-[Gravação de tela de 17-08-2022 18:58:29.webm](https://user-images.githubusercontent.com/69175890/185251308-80de6644-dbcd-487c-b4cd-8827363806fc.webm)
-
+<p align="center">
+    <img height="400" src="https://user-images.githubusercontent.com/69175890/185414099-614b7626-54c0-4eab-aeb4-1391b8d0f50b.png">
+</p>
 <h1>Start</h1>
+
+* Link heroku
+    * https://gamegeniuss.herokuapp.com/
 
 ```
   installing dependencies
