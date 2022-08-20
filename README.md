@@ -6,13 +6,14 @@
     <IMG height="200" src="https://macmagazine.com.br/wp-content/uploads/2010/09/24-genius_icon.png">
 </p>
 
+<p align="center">
+<a href='https://gamegeniuss.herokuapp.com'>PLAY GAME
+</p>
 
 <h1> About </h1>
 This game was developed to practice my knowledge
 in React.JS, without the help of videos or internet tutorials
 
-* Link heroku
-    * https://gamegeniuss.herokuapp.com/
     
 ###
 <p align="center">
@@ -21,6 +22,9 @@ in React.JS, without the help of videos or internet tutorials
 <h1>Start</h1>
 
 
+<p align="center">
+<a href='https://gamegeniuss.herokuapp.com'>Play online
+</p>
 
 ```
   installing dependencies
